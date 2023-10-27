@@ -1,12 +1,15 @@
 import React, { ReactNode } from 'react'
 
-interface Props{
-    children : ReactNode
+interface Props {
+  children: ReactNode
 }
 
-const AdminLayout = ( {children} : Props) => {
+const AdminLayout = ({ children }: Props) => {
   return (
-    <div>AdminLayout</div>
+    <div className='flex'>
+      <aside className='bg-slate-200 p-5 m-5'>Admin Sidebare</aside>
+      <div>{children}</div>
+    </div>
   )
 }
 
